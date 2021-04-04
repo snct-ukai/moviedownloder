@@ -30,10 +30,10 @@ async def on_message(message):
             else:
                 th_list = url[1]
 
-            cmd = 'youtube-dl -o ../../web/www/download/%(title)s.%(ext)s -i -f mp4 --add-metadata ' + th_list
+            cmd = 'youtube-dl -o ./%(title)s.%(ext)s -i -f mp4 --add-metadata ' + th_list
             await message.channel.send("ダウンロード中です")
             subprocess.check_call(cmd.split())
-            await message.channel.send("ダウンロードが完了しました\nhttp://puipui.tk/download")
+            await message.channel.send("ダウンロードが完了しました")
 
             return
         
@@ -45,4 +45,4 @@ async def on_message(message):
         await message.channel.send("終了します")
         sys.exit()
 
-client.run("ODI4MDgxMzc3NDYzMjM4Njk2.YGkY4Q.en1QZjhcBt0KbBePYz_aSJfQwoU")
+client.run("********************")
